@@ -60,7 +60,7 @@
       <button type="submit">إرسال</button>
     </form>
   </section>
-
+ 
   <footer>
     <p>© 2025 Yasser AIRobotics – جميع الحقوق محفوظة</p>
   </footer>
