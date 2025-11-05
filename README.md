@@ -64,5 +64,5 @@
   <footer>
     <p>© 2025 Yasser AIRobotics – جميع الحقوق محفوظة</p>
   </footer>
-</body>
+</body> 
 </html> 
