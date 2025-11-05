@@ -11,8 +11,8 @@
     <nav>
       <ul>
         <li><a href="#about">من نحن</a></li>
-        <li><a href="#products">المنتجات</a></li>
-        <li><a href="#upload">رفع الفيديو</a></li>
+        <li><a href="#products">المنتجات الذي صنعها ياسر احمد</a></li>
+        <li><a href="#upload">شارك فيديوهاتك معنا</a></li>
         <li><a href="#download">تحميل</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
       </ul>
