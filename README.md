@@ -11,7 +11,7 @@
     <nav>
       <ul>
         <li><a href="#about">من نحن</a></li>
-        <li><a href="#products">المنتجات</a></li>
+        <li><a href="#products">المنتجات الذي صنعها المهندس ياسر</a></li>
         <li><a href="#upload">رفع الفيديو</a></li>
         <li><a href="#download">تحميل</a></li>
         <li><a href="#contact">تواصل معنا</a></li>
