@@ -96,7 +96,16 @@
   </blockquote>
 </section>
 
-<!-- تحديث الفوتر -->
+
+<!-- تحديث الفوتر --><section id="gallery" class="fade-in">
+  <h2>معرض الصور</h2>
+  <div class="gallery">
+    <img src="images/product1.jpg" alt="روبوت ذكي">
+    <img src="images/product2.jpg" alt="باور سبلاي متعدد">
+    <img src="images/product3.jpg" alt="لوحة تحكم Arduino">
+    <img src="images/product4.jpg" alt="شاشة عرض تفاعلية">
+  </div>
+</section>
 <footer>
   <p>© 2025 Yasser AIRobotics – جميع الحقوق محفوظة</p>
   <p>تابعنا على: 
