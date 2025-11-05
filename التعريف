@@ -1,0 +1,42 @@
+<!-- قسم فريق العمل -->
+<section id="team" class="fade-in">
+  <h2>فريق العمل</h2>
+  <p>يتكون فريق Yasser AIRobotics من مهندسين ومبدعين متخصصين في الإلكترونيات والذكاء الاصطناعي، بقيادة ياسر – خبير في تصميم الأنظمة الذكية والروبوتات.</p>
+  <ul>
+    <li>ياسر – مؤسس ومدير تقني</li>
+    <li>محمود – مطور واجهات وتحكم</li>
+    <li>سارة – مسؤولة تسويق وتصميم دعائي</li>
+  </ul>
+</section>
+
+<!-- قسم مميزاتنا -->
+<section id="features" class="slide-in-right">
+  <h2>مميزاتنا</h2>
+  <ul>
+    <li>تصميمات ذكية قابلة للتخصيص</li>
+    <li>دعم فني مباشر وسريع</li>
+    <li>منتجات موثوقة بأسعار منافسة</li>
+    <li>توصيل داخل الإسكندرية خلال 24 ساعة</li>
+  </ul>
+</section>
+
+<!-- قسم آراء العملاء -->
+<section id="testimonials" class="slide-in-left">
+  <h2>آراء العملاء</h2>
+  <blockquote>
+    "أفضل باور سبلاي استخدمته في مشروعي، شكراً Yasser AIRobotics!" – أحمد من القاهرة
+  </blockquote>
+  <blockquote>
+    "الروبوت الذكي أدهشني، تصميم احترافي وسهل الاستخدام." – ريم من الإسكندرية
+  </blockquote>
+</section>
+
+<!-- تحديث الفوتر -->
+<footer>
+  <p>© 2025 Yasser AIRobotics – جميع الحقوق محفوظة</p>
+  <p>تابعنا على: 
+    <a href="https://facebook.com" target="_blank">فيسبوك</a> | 
+    <a href="https://instagram.com" target="_blank">إنستجرام</a> | 
+    <a href="mailto:info@yasserairobotics.com">البريد الإلكتروني</a>
+  </p>
+</footer>
