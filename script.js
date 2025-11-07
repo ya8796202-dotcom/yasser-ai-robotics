@@ -7,6 +7,5 @@ const observer = new IntersectionObserver((entries)=>{
   });
 },{threshold:0.2});
 
-document.querySelectorAll('.card, .gallery-grid img, .video-container, .btn, header')
+document.querySelectorAll('.card, .gallery-grid img, .video-container, .btn')
   .forEach(el=>observer.observe(el));
-
