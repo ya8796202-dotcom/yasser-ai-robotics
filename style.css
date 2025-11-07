@@ -1,14 +1,24 @@
-body { font-family: "Cairo", sans-serif; background:#f0fff4; margin:0; }
-header { text-align:center; padding:30px; background:linear-gradient(135deg,#ffdde1,#ee9ca7); }
-header h1 { background:#fff; display:inline-block; padding:15px 30px; border:3px solid #ee9ca7; border-radius:12px; }
-.card { background:#fff; margin:20px auto; padding:20px; max-width:900px; border-radius:12px; box-shadow:0 6px 16px rgba(0,0,0,0.1); }
-.btn { display:inline-block; padding:10px 20px; margin:5px; border-radius:8px; color:#fff; text-decoration:none; }
-.btn-pulse { background:linear-gradient(135deg,#27ae60,#2ecc71); animation:pulse 2s infinite; }
-.fb { background:#1877f2; } .yt { background:#ff0000; } .ig { background:#bc1888; } .wa { background:#25D366; }
-.gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
-.gallery-grid img { width:100%; border-radius:8px; }
-.video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; }
-.video-container { position:relative; padding-top:56.25%; margin:10px 0; }
-.video-container iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
-footer { text-align:center; padding:15px; background:#eee; }
-@keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.1);} }
+header {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  display: inline-block;
+  padding: 20px 40px;
+  background: #fff;
+  border: 3px solid #ee9ca7;
+  border-radius: 14px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #444;
+}
+
