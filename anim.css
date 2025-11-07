@@ -1,12 +1,45 @@
-.card, .gallery-grid img, .video-container, .btn {
-  opacity:0; transform:translateY(40px);
-  transition:all 0.8s ease;
+/* دخول ناعم عند النزول بالصفحة (Scroll Reveal) */
+.card,
+.gallery-grid img,
+.video-container,
+.member,
+.feature,
+header {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.8s ease;
 }
-.in-view { opacity:1; transform:translateY(0); }
 
-/* صور تكبر */
-.gallery-grid img.in-view { transform:scale(1); }
+/* عند الدخول في الشاشة */
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-/* فيديوهات تدخل من اليمين */
-.video-container { transform:translateX(60px); }
-.video-container.in-view { transform:translateX(0); }
+/* صور تكبر خفيف */
+.gallery-grid img {
+  transform: translateY(40px) scale(0.94);
+}
+.gallery-grid img.in-view {
+  transform: translateY(0) scale(1);
+}
+
+/* الفيديوهات تدخل بخفة من اليمين */
+.video-container {
+  transform: translateX(60px);
+}
+.video-container.in-view {
+  transform: translateX(0);
+}
+
+/* تدرج ظهور أعضاء الفريق */
+.member:nth-child(1) { transition-delay: 0.1s; }
+.member:nth-child(2) { transition-delay: 0.2s; }
+.member:nth-child(3) { transition-delay: 0.3s; }
+.member:nth-child(4) { transition-delay: 0.4s; }
+
+/* لمسة هوفر على البطاقات */
+.card:hover {
+  box-shadow: 0 14px 30px rgba(93,64,55,0.18);
+}
+
