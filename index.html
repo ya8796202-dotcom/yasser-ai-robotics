@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -10,126 +10,241 @@
 </head>
 <body>
 
-  <!-- رأس الموقع -->
+  <!-- رأس الموقع (ثابت بدون حركة كتابة) -->
   <header>
     <h1>Abo El yoser robotics</h1>
     <p>حلول روبوتات وإلكترونيات متكاملة — تصميم، برمجة، ابتكار</p>
   </header>
 
   <main>
-    <section id="about" class="card"><h2>من نحن</h2><p>نحن فريق يقوده المهندس ياسر...</p></section>
-    <section id="products" class="card"><h2>منتجاتنا</h2><p>روبوتات، مزودات طاقة، شاشات عرض...</p></section>
-    <section id="features" class="card"><h2>مميزاتنا</h2><ul><li>جودة</li><li>سرعة</li><li>دعم</li></ul></section>
-    <section id="services" class="card"><h2>الخدمات</h2><p>تصميم دوائر، برمجة أنظمة، مواقع ويب...</p></section>
-    <section id="pricing" class="card"><h2>الأسعار</h2><p>باقات متنوعة تناسب الجميع...</p></section>
-    <section id="gallery" class="card"><h2>المعرض</h2><div class="gallery-grid"><img src="https://via.placeholder.com/300x200"></div></section>
+    <!-- من نحن -->
+    <section id="about" class="card">
+      <h2>من نحن</h2>
+      <p>فريق يقوده المهندس ياسر من الإسكندرية، متخصصون في بناء أنظمة روبوتية ذكية، مزودات طاقة، لوحات عرض، وحلول برمجية متكاملة.</p>
+      <ul>
+        <li>خبرة ميدانية قوية في السوق المحلي</li>
+        <li>تصاميم قابلة للتطوير والتخصيص</li>
+        <li>توثيق احترافي بالصور والفيديو والعلامة التجارية</li>
+      </ul>
+    </section>
+
+    <!-- رؤيتنا ورسالتنا -->
+    <section id="vision" class="card">
+      <h2>رؤيتنا ورسالتنا</h2>
+      <p>نطمح لقيادة مجال الروبوتات في الشرق الأوسط بحلول عملية تخدم التعليم والصناعة.</p>
+      <p><strong>رسالتنا:</strong> تمكين الجميع من استخدام التكنولوجيا بفعالية وبساطة.</p>
+    </section>
+
+    <!-- قيمنا الأساسية -->
+    <section id="values" class="card">
+      <h2>قيمنا الأساسية</h2>
+      <ul>
+        <li>الابتكار المستمر</li>
+        <li>الجودة أولًا</li>
+        <li>الشفافية مع العملاء</li>
+        <li>التعاون وروح الفريق</li>
+      </ul>
+    </section>
+
+    <!-- منتجاتنا -->
+    <section id="products" class="card">
+      <h2>منتجاتنا</h2>
+      <div class="grid-3">
+        <div class="feature"><h3>روبوت تجنب العوائق</h3><p>عربة ذكية بمستشعرات فوق صوتية وتوجيه ديناميكي.</p></div>
+        <div class="feature"><h3>مزود طاقة قابل للبرمجة</h3><p>خرج مستقر مع حماية وإعدادات مخصصة.</p></div>
+        <div class="feature"><h3>لوحات عرض تفاعلية</h3><p>محتوى ديناميكي وتحكم عبر الويب.</p></div>
+      </div>
+    </section>
+
+    <!-- المواصفات التقنية -->
+    <section id="specs" class="card">
+      <h2>المواصفات التقنية</h2>
+      <table>
+        <tr><th>المنتج</th><th>المتحكم</th><th>الاتصال</th><th>الطاقة</th></tr>
+        <tr><td>روبوت تجنب العوائق</td><td>ESP32</td><td>Wi‑Fi / BLE</td><td>بطارية 2200 mAh</td></tr>
+        <tr><td>مزود طاقة ذكي</td><td>STM32</td><td>USB‑C / UART</td><td>220V AC</td></tr>
+        <tr><td>لوحة عرض</td><td>RPi</td><td>Ethernet / Wi‑Fi</td><td>12V DC</td></tr>
+      </table>
+    </section>
+
+    <!-- مميزاتنا -->
+    <section id="features" class="card">
+      <h2>مميزاتنا</h2>
+      <ul>
+        <li>اختبارات جودة صارمة لكل منتج</li>
+        <li>سرعة تنفيذ وتسليم</li>
+        <li>دعم فني بعد البيع</li>
+        <li>أسعار تنافسية</li>
+      </ul>
+    </section>
+
+    <!-- الخدمات -->
+    <section id="services" class="card">
+      <h2>الخدمات</h2>
+      <div class="grid-3">
+        <div class="feature"><h3>تصميم دوائر</h3><p>PCB، تصنيع وتجميع، مع توثيق كامل.</p></div>
+        <div class="feature"><h3>أنظمة مدمجة</h3><p>Arduino/ESP32/RPi مع حساسات وشاشات.</p></div>
+        <div class="feature"><h3>لوحات تحكم ويب</h3><p>Panel تحكم وAPIs وربط سحابي.</p></div>
+      </div>
+    </section>
+
+    <!-- باقات الأسعار -->
+    <section id="pricing" class="card">
+      <h2>الأسعار</h2>
+      <div class="pricing">
+        <div class="plan"><h3>أساسي</h3><p class="price">1200</p><p>مقدمة سريعة ومشروع صغير.</p></div>
+        <div class="plan featured"><h3>احترافي</h3><p class="price">2800</p><p>حلول متكاملة وتوثيق كامل.</p></div>
+        <div class="plan"><h3>مخصص</h3><p class="price">حسب الطلب</p><p>تصميم حسب الاحتياج.</p></div>
+      </div>
+    </section>
+
+    <!-- المعرض -->
+    <section id="gallery" class="card">
+      <h2>المعرض</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/340x220?text=Project+1" alt="مشروع 1">
+        <img src="https://via.placeholder.com/340x220?text=Project+2" alt="مشروع 2">
+        <img src="https://via.placeholder.com/340x220?text=Project+3" alt="مشروع 3">
+        <img src="https://via.placeholder.com/340x220?text=Project+4" alt="مشروع 4">
+      </div>
+    </section>
+
+    <!-- الفيديوهات (روابطك) -->
     <section id="videos" class="card">
       <h2>الفيديوهات</h2>
       <div class="video-grid">
-        <div class="video-container"><iframe src="https://www.youtube.com/embed/BjzaKMvR8s0" allowfullscreen></iframe></div>
-        <div class="video-container"><iframe src="https://www.youtube.com/embed/cj3cM_243Wo" allowfullscreen></iframe></div>
-        <div class="video-container"><iframe src="https://www.youtube.com/embed/1n_KjpMfVT0" allowfullscreen></iframe></div>
-        <div class="video-container"><iframe src="https://www.youtube.com/embed/gU-CZP2nIwQ" allowfullscreen></iframe></div>
+        <div class="video-container"><iframe src="https://www.youtube.com/embed/BjzaKMvR8s0" title="YouTube video 1" allowfullscreen></iframe></div>
+        <div class="video-container"><iframe src="https://www.youtube.com/embed/cj3cM_243Wo" title="YouTube video 2" allowfullscreen></iframe></div>
+        <div class="video-container"><iframe src="https://www.youtube.com/embed/1n_KjpMfVT0" title="YouTube video 3" allowfullscreen></iframe></div>
+        <div class="video-container"><iframe src="https://www.youtube.com/embed/gU-CZP2nIwQ" title="YouTube video 4" allowfullscreen></iframe></div>
       </div>
     </section>
-    <section id="team" class="card"><h2>فريق العمل</h2><p>المهندس ياسر وفريقه...</p></section>
-    <section id="blog" class="card"><h2>المدونة</h2><p>مقالات تقنية ومشاريع جديدة...</p></section>
-    <section id="testimonials" class="card"><h2>آراء العملاء</h2><blockquote>"خدمة ممتازة"</blockquote></section>
-    <section id="auth" class="card"><h2>إنشاء حساب / تسجيل الدخول</h2><button class="btn btn-pulse">إنشاء حساب</button></section>
-    <section id="social" class="card"><h2>تابعنا</h2>
-      <a class="btn fb" href="#">فيسبوك</a>
-      <a class="btn yt" href="#">يوتيوب</a>
-      <a class="btn ig" href="#">انستجرام</a>
-      <a class="btn wa" href="https://wa.me/201040363927" target="_blank">واتساب</a>
+
+    <!-- فريق العمل -->
+    <section id="team" class="card">
+      <h2>فريق العمل</h2>
+      <div class="team-grid">
+        <div class="member"><h3>المهندس ياسر</h3><p>قيادة المشاريع والإلكترونيات.</p></div>
+        <div class="member"><h3>أحمد</h3><p>برمجة الأنظمة والواجهات.</p></div>
+        <div class="member"><h3>سارة</h3><p>تصميم وتجربة المستخدم.</p></div>
+        <div class="member"><h3>نور</h3><p>اختبارات الجودة والتوثيق.</p></div>
+      </div>
+    </section>
+
+    <!-- المدونة -->
+    <section id="blog" class="card">
+      <h2>المدونة</h2>
+      <article><h3>تقليل زمن التطوير</h3><p>خطوات عملية لاختصار الزمن بين النموذج الأولي والإصدار التجاري.</p></article>
+      <article><h3>اختيار الحساس المناسب</h3><p>مقارنة بين الحساسات وتأثيرها على أداء العربة الذكية.</p></article>
+      <article><h3>أفضل ممارسات الطاقة</h3><p>كيف تضبط دوائرك لتوفير الطاقة بأمان.</p></article>
+    </section>
+
+    <!-- آراء العملاء -->
+    <section id="testimonials" class="card">
+      <h2>آراء العملاء</h2>
+      <blockquote>“تنفيذ سريع وجودة ممتازة.”</blockquote>
+      <blockquote>“دعم محترم ومتابعة ما بعد البيع.”</blockquote>
+      <blockquote>“تفاصيل دقيقة وتوثيق واضح.”</blockquote>
+    </section>
+
+    <!-- الأسئلة الشائعة -->
+    <section id="faq" class="card">
+      <h2>الأسئلة الشائعة</h2>
+      <details><summary>هل تقدمون شحن دولي؟</summary><p>نعم، عبر شركات معتمدة.</p></details>
+      <details><summary>هل يمكن تخصيص المنتجات؟</summary><p>بالطبع، نعدل التصميم حسب احتياجك.</p></details>
+      <details><summary>ما زمن التسليم؟</summary><p>حسب حجم المشروع، عادة من 7 إلى 21 يوم.</p></details>
+    </section>
+
+    <!-- شركاؤنا -->
+    <section id="partners" class="card">
+      <h2>شركاؤنا</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/200x100?text=Partner+1" alt="Partner 1">
+        <img src="https://via.placeholder.com/200x100?text=Partner+2" alt="Partner 2">
+        <img src="https://via.placeholder.com/200x100?text=Partner+3" alt="Partner 3">
+      </div>
+    </section>
+
+    <!-- الجوائز والشهادات -->
+    <section id="awards" class="card">
+      <h2>الجوائز والشهادات</h2>
+      <ul>
+        <li>جائزة أفضل مشروع روبوتي 2023</li>
+        <li>شهادة جودة 2024</li>
+      </ul>
+    </section>
+
+    <!-- مركز التحميلات -->
+    <section id="downloads" class="card">
+      <h2>مركز التحميلات</h2>
+      <ul>
+        <li><a href="#" download>كتالوج المنتجات PDF</a></li>
+        <li><a href="#" download>صور عالية الجودة</a></li>
+        <li><a href="#" download>دليل المستخدم</a></li>
+      </ul>
+    </section>
+
+    <!-- خريطة الموقع -->
+    <section id="map" class="card">
+      <h2>موقعنا</h2>
+      <iframe title="Google Map" src="https://maps.google.com/maps?q=Alexandria%20Egypt&t=&z=12&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>
+    </section>
+
+    <!-- إنشاء حساب / تسجيل الدخول -->
+    <section id="auth" class="card">
+      <h2>إنشاء حساب / تسجيل الدخول</h2>
+      <button class="btn btn-pulse">إنشاء حساب</button>
+    </section>
+
+    <!-- تابعنا -->
+    <section id="social" class="card">
+      <h2>تابعنا</h2>
+      <a class="btn fb" href="#" target="_blank">فيسبوك</a>
+      <a class="btn yt" href="#" target="_blank">يوتيوب</a>
+      <a class="btn ig" href="#" target="_blank">انستجرام</a>
+      <a class="btn wa" href="https://wa.me/201040363927" target="_blank">تواصل مع المهندس ياسر عبر واتساب</a>
+    </section>
+
+    <!-- النشرة البريدية -->
+    <section id="newsletter" class="card">
+      <h2>اشترك في نشرتنا</h2>
+      <form onsubmit="return false;">
+        <input type="email" placeholder="أدخل بريدك الإلكتروني">
+        <button class="btn btn-green">اشترك</button>
+      </form>
+    </section>
+
+    <!-- خريطة الموقع النصية -->
+    <section id="sitemap" class="card">
+      <h2>خريطة الموقع</h2>
+      <ul class="sitemap">
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#products">منتجاتنا</a></li>
+        <li><a href="#features">مميزاتنا</a></li>
+        <li><a href="#services">الخدمات</a></li>
+        <li><a href="#pricing">الأسعار</a></li>
+        <li><a href="#gallery">المعرض</a></li>
+        <li><a href="#videos">الفيديوهات</a></li>
+        <li><a href="#team">فريق العمل</a></li>
+        <li><a href="#blog">المدونة</a></li>
+        <li><a href="#testimonials">آراء العملاء</a></li>
+        <li><a href="#faq">الأسئلة الشائعة</a></li>
+        <li><a href="#partners">شركاؤنا</a></li>
+        <li><a href="#awards">الجوائز</a></li>
+        <li><a href="#downloads">التحميلات</a></li>
+        <li><a href="#map">موقعنا</a></li>
+        <li><a href="#auth">إنشاء حساب</a></li>
+        <li><a href="#social">تابعنا</a></li>
+        <li><a href="#newsletter">النشرة البريدية</a></li>
+      </ul>
     </section>
   </main>
 
-  <footer><p>© 2025 Abo El yoser robotics</p></footer>
+  <footer>
+    <p>© 2025 Abo El yoser robotics — جميع الحقوق محفوظة</p>
+  </footer>
 
+  <!-- ربط ملف JS -->
   <script src="script.js"></script>
 </body>
 </html>
-<!-- رؤيتنا ورسالتنا -->
-<section id="vision" class="card">
-  <h2>رؤيتنا ورسالتنا</h2>
-  <p>نسعى لأن نكون رواد الروبوتات في الشرق الأوسط، بتقديم حلول عملية وذكية تخدم التعليم والصناعة.</p>
-  <p><strong>رسالتنا:</strong> تمكين الأفراد والشركات من استخدام التكنولوجيا الحديثة بسهولة وفعالية.</p>
-</section>
-
-<!-- قيمنا -->
-<section id="values" class="card">
-  <h2>قيمنا الأساسية</h2>
-  <ul>
-    <li>الابتكار المستمر</li>
-    <li>الشفافية مع العملاء</li>
-    <li>الجودة قبل الكمية</li>
-    <li>التعاون وروح الفريق</li>
-  </ul>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="card">
-  <h2>الأسئلة الشائعة</h2>
-  <details>
-    <summary>هل تقدمون شحن دولي؟</summary>
-    <p>نعم، نوفر شحن دولي عبر شركات معتمدة.</p>
-  </details>
-  <details>
-    <summary>هل يمكن تخصيص المنتجات؟</summary>
-    <p>بالطبع، يمكننا تعديل التصميم حسب احتياجاتك.</p>
-  </details>
-</section>
-
-<!-- شركاؤنا -->
-<section id="partners" class="card">
-  <h2>شركاؤنا</h2>
-  <div class="gallery-grid">
-    <img src="https://via.placeholder.com/200x100?text=Partner+1">
-    <img src="https://via.placeholder.com/200x100?text=Partner+2">
-    <img src="https://via.placeholder.com/200x100?text=Partner+3">
-  </div>
-</section>
-
-<!-- الجوائز -->
-<section id="awards" class="card">
-  <h2>الجوائز والشهادات</h2>
-  <ul>
-    <li>جائزة أفضل مشروع روبوتي 2023</li>
-    <li>شهادة ISO للجودة 2024</li>
-  </ul>
-</section>
-
-<!-- جدول مواصفات -->
-<section id="specs" class="card">
-  <h2>المواصفات التقنية</h2>
-  <table>
-    <tr><th>المنتج</th><th>المعالج</th><th>الذاكرة</th><th>البطارية</th></tr>
-    <tr><td>روبوت تجنب العوائق</td><td>ESP32</td><td>2MB</td><td>2200mAh</td></tr>
-    <tr><td>مزود طاقة</td><td>STM32</td><td>512KB</td><td>220V AC</td></tr>
-  </table>
-</section>
-
-<!-- مركز التحميلات -->
-<section id="downloads" class="card">
-  <h2>مركز التحميلات</h2>
-  <ul>
-    <li><a href="#">كتالوج المنتجات PDF</a></li>
-    <li><a href="#">صور عالية الجودة</a></li>
-    <li><a href="#">دليل المستخدم</a></li>
-  </ul>
-</section>
-
-<!-- خريطة -->
-<section id="map" class="card">
-  <h2>موقعنا</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="300" style="border:0;" allowfullscreen></iframe>
-</section>
-
-<!-- نشرة بريدية -->
-<section id="newsletter" class="card">
-  <h2>اشترك في نشرتنا</h2>
-  <form>
-    <input type="email" placeholder="أدخل بريدك الإلكتروني">
-    <button class="btn btn-green">اشترك</button>
-  </form>
-</section>
