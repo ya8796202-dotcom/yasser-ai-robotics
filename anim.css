@@ -1,4 +1,4 @@
-.card, .gallery-grid img, .video-container, .btn, header {
+.card, .gallery-grid img, .video-container, .btn {
   opacity:0; transform:translateY(40px);
   transition:all 0.8s ease;
 }
