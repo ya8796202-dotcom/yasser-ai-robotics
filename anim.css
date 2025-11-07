@@ -1,22 +1,28 @@
-/* دخول ناعم عند النزول بالصفحة (Scroll Reveal) */
+/* دخول ناعم عند التمرير */
+header,
 .card,
 .gallery-grid img,
 .video-container,
 .member,
-.feature,
-header {
+.feature {
   opacity: 0;
   transform: translateY(40px);
   transition: transform 0.8s ease, opacity 0.8s ease, box-shadow 0.8s ease;
 }
 
-/* عند الدخول في الشاشة */
+/* إظهار عند الدخول في الشاشة */
 .in-view {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* صور تكبر خفيف */
+/* الهيدر: نص ثابت، دخول ناعم للحاوية فقط */
+header.in-view h1,
+header.in-view p {
+  opacity: 1;
+}
+
+/* الصور: تكبير خفيف مع الدخول */
 .gallery-grid img {
   transform: translateY(40px) scale(0.94);
 }
@@ -24,7 +30,7 @@ header {
   transform: translateY(0) scale(1);
 }
 
-/* الفيديوهات تدخل بخفة من اليمين */
+/* الفيديوهات: دخول من اليمين */
 .video-container {
   transform: translateX(60px);
 }
@@ -38,7 +44,7 @@ header {
 .member:nth-child(3) { transition-delay: 0.3s; }
 .member:nth-child(4) { transition-delay: 0.4s; }
 
-/* لمسة هوفر على البطاقات */
+/* لمسة هوفر للبطاقات */
 .card:hover {
   box-shadow: 0 14px 30px rgba(93,64,55,0.18);
 }
