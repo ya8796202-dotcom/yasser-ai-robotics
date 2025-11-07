@@ -111,4 +111,56 @@ textarea { resize: vertical; }
 
 /* فوتر */
 .footer { text-align: center; padding: 22px; background: #ffffffcc; backdrop-filter: blur(6px); border-top: 1px solid #e7e7e7; }
+/* البطاقات */
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s forwards;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* الصور */
+.gallery-grid img {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1s forwards;
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* الفيديوهات */
+.video-container {
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: slideIn 1s forwards;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* الفريق */
+.member {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+.member:nth-child(1) { animation-delay: 0.2s; }
+.member:nth-child(2) { animation-delay: 0.4s; }
+.member:nth-child(3) { animation-delay: 0.6s; }
+
+/* الأزرار */
+.btn:hover {
+  animation: pulseBtn 0.6s;
+}
+@keyframes pulseBtn {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
 
