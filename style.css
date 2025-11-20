@@ -1,11 +1,11 @@
 /* -- 1. المتغيرات الأساسية والإعدادات العامة -- */
 :root {
-    --color-primary: #007BFF; /* أزرق أساسي */
-    --color-secondary: #28a745; /* أخضر ثانوي */
-    --color-dark: #212529; /* خلفية داكنة */
-    --color-light: #f8f9fa; /* نص أو خلفية فاتحة */
-    --color-card-bg: rgba(255, 255, 255, 0.95); /* خلفية البطاقات شفافة */
-    --color-shadow: rgba(0, 0, 0, 0.15);
+    --color-primary: #007BFF; 
+    --color-secondary: #28a745; 
+    --color-dark: #212529; 
+    --color-light: #f8f9fa; 
+    --color-card-bg: rgba(255, 255, 255, 0.9); 
+    --color-shadow: rgba(0, 0, 0, 0.3); 
     --font-cairo: 'Cairo', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
 }
@@ -18,20 +18,23 @@
 }
 
 body {
-    /* الخلفية المتحركة (GIF) - تم استخدام الرابط المباشر */
+    /* 🖼️ تطبيق الخلفية المتحركة */
     background-image: url('https://raw.githubusercontent.com/ya8796202-dotcom/yasser-ai-robotics/29646c34a33176b8a5f11eaf3612aa50cacde286/Gemini_Generated_Image_ejf8oqejf8oqejf8.png');
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; 
     background-position: center center;
-    background-color: var(--color-dark); /* احتياطي */
+    background-repeat: no-repeat;
+    background-color: var(--color-dark); 
+    
     line-height: 1.6;
-    color: var(--color-dark);
+    color: var(--color-dark); 
+    min-height: 100vh;
 }
 
 main {
     padding: 20px;
     max-width: 1200px;
-    margin: 90px auto 40px; /* تباعد بسبب الهيدر الثابت */
+    margin: 90px auto 40px; 
 }
 
 a {
@@ -45,7 +48,7 @@ a:hover {
 
 /* -- 2. الرأس (Header) -- */
 header {
-    background: var(--color-dark);
+    background: rgba(33, 37, 41, 0.95);
     color: var(--color-light);
     padding: 20px 0;
     text-align: center;
@@ -53,14 +56,20 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    box-shadow: 0 4px 10px var(--color-shadow);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    /* حركة دخول أولية */
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+}
+header.in-view {
+    transform: translateY(0);
 }
 header h1 {
     font-family: var(--font-poppins);
     font-size: 2.2rem;
     margin-bottom: 5px;
-    color: var(--color-secondary); /* تمييز الاسم */
+    color: var(--color-secondary);
 }
 header p {
     font-size: 1rem;
@@ -73,39 +82,35 @@ header p {
     padding: 30px;
     margin-bottom: 30px;
     border-radius: 12px;
-    box-shadow: 0 6px 20px var(--color-shadow);
-    border-right: 5px solid var(--color-primary); /* شريط جانبي للتأكيد */
+    box-shadow: 0 8px 25px var(--color-shadow);
+    border-right: 5px solid var(--color-primary);
+    transition: all 0.5s ease, opacity 0.8s ease, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* تحسين الانتقالات */
 }
+/* تأثير التكبير عند التمرير على البطاقة */
+.card:hover {
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.4);
+    transform: translateY(-5px); /* رفع خفيف */
+    border-right: 5px solid var(--color-secondary);
+}
+
 .card h2 {
     font-family: var(--font-poppins);
     font-size: 1.8rem;
     color: var(--color-primary);
-    border-bottom: 2px solid var(--color-light);
+    border-bottom: 2px solid #ccc; 
     padding-bottom: 10px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.card ul {
-    list-style: none;
-    padding-right: 0;
-}
 .card li {
     padding: 8px 0;
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px dotted #e0e0e0;
     font-size: 1.05rem;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-.card li:last-child {
-    border-bottom: none;
-}
-.mission-statement {
-    font-style: italic;
-    color: var(--color-secondary);
-    font-weight: bold;
 }
 
 /* -- 4. الأزرار (Buttons) -- */
@@ -121,157 +126,114 @@ header p {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.edu-link { /* زر الموقع التعليمي */
+.edu-link {
     background: var(--color-secondary);
     color: white;
     margin-top: 30px;
 }
 .edu-link:hover {
     background: #1e7e34;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.6);
+}
+
+/* زر الواتساب وتأثير النبض (Pulse Animation) */
+.btn.wa {
+    background: #25d366;
+    color: white;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    animation: pulse 1.5s infinite; /* تطبيق النبض */
+}
+.btn.wa:hover {
+    animation: none; /* إيقاف النبض عند التمرير */
+    transform: translateY(-3px) scale(1.05);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
 }
 
 /* الأزرار الاجتماعية */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
 .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    color: white;
-    font-size: 1.2rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.wa { background: #25d366; }
-.fb { background: #3b5998; }
-.yt { background: #ff0000; }
-.ig { background: #e1306c; }
+.social-icon:hover {
+    transform: scale(1.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
 
 /* -- 5. الجداول والشبكات -- */
-.grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    text-align: center;
-}
 .feature {
-    background: rgba(0, 123, 255, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    border-top: 4px solid var(--color-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.feature h3 {
-    color: var(--color-dark);
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    text-align: right;
-    font-family: var(--font-poppins);
+table th {
+    transition: background-color 0.3s ease;
 }
-th, td {
-    padding: 12px;
-    border: 1px solid #dee2e6;
-}
-th {
-    background-color: var(--color-primary);
-    color: white;
-    font-weight: bold;
-}
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+table:hover th {
+    background-color: #0056b3;
 }
 
 /* -- 6. المعرض والفيديوهات -- */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
 .gallery-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px var(--color-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.gallery-grid img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
+
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px var(--color-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.video-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* -- 7. آراء العملاء والتواصل -- */
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
 blockquote {
-    border-right: 5px solid var(--color-secondary);
-    padding: 15px;
-    margin: 10px 0;
-    font-style: italic;
-    background: #e9f5ee;
-    border-radius: 5px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+blockquote:hover {
+    transform: translateX(5px);
+    border-color: var(--color-primary);
 }
 
-/* نموذج التواصل */
-#contact form input[type="text"],
-#contact form input[type="email"],
-#contact form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: var(--font-cairo);
-}
-#contact form textarea {
-    resize: vertical;
-}
-.btn-primary {
-    background: var(--color-primary);
-    color: white;
+/* نموذج التواصل - تأثير على حقول الإدخال */
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
 }
 .btn-primary:hover {
     background: #0056b3;
-    transform: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.4);
 }
 
 /* -- 8. الفوتر (Footer) -- */
 footer {
-    background: var(--color-dark);
+    background: rgba(33, 37, 41, 0.95);
     color: #999;
     text-align: center;
     padding: 15px 0;
@@ -279,9 +241,9 @@ footer {
     border-top: 3px solid var(--color-primary);
 }
 
-/* -- 9. تأثيرات الظهور عند التمرير (Animation CSS) -- */
+/* -- 9. حركة الدخول الناعمة (Animation on Scroll) -- */
 
-/* إخفاء مبدئي */
+/* إخفاء مبدئي لجميع العناصر التي ستحرك */
 .card,
 .feature,
 .gallery-grid img,
@@ -290,10 +252,13 @@ footer {
 .social-icon,
 .testimonial-grid blockquote,
 table,
-.sitemap li {
+.sitemap li,
+.edu-link,
+#contact form > * {
   opacity: 0;
   transform: translateY(30px);
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.8s ease; /* تعديل الـ cubic-bezier لجعل الدخول أفضل */
+  /* استخدام دالة تسارع (Cubic-Bezier) للتحريك الناعم مع ارتداد خفيف */
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.8s ease; 
 }
 
 /* إظهار عند الدخول في الشاشة */
@@ -301,6 +266,8 @@ table,
   opacity: 1;
   transform: translateY(0);
 }
+
+/* لتجنب تحرك الصورة في المعرض بشكل زائد عند الدخول */
 .gallery-grid img.in-view {
   transform: translateY(0) scale(1.0);
-      }
+    }
